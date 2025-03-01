@@ -1,6 +1,6 @@
 {
   "name": "geochatt",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "JavaScript Utility Functions for Working with Open GeoSpatial Data about Chattanooga",
   "main": "./lib/index.js",
   "files": [
