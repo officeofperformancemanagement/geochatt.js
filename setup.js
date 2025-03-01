@@ -1,6 +1,5 @@
 const fs = require("node:fs");
 const path = require("node:path");
-const zlib = require("node:zlib");
 
 (async function () {
   const url =
@@ -10,9 +9,9 @@ const zlib = require("node:zlib");
 
   console.log(`[geochatt] fetching parcel data from ${url}`);
   const response = await fetch(url);
-  const buffer = await response.arrayBuffer();
-  const decompressedBuffer = await zlib.gunzipSync(buffer);
+  const arrayBuffer = await response.arrayBuffer();
+  const buffer = Buffer.from(arrayBuffer);
 
-  fs.writeFileSync(outputPath, decompressedBuffer);
+  fs.writeFileSync(outputPath, buffer);
   console.log(`[geochatt] saved parcel data to ${outputPath}`);
 })();

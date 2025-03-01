@@ -4,11 +4,12 @@
   "description": "JavaScript Utility Functions for Working with Open GeoSpatial Data about Chattanooga",
   "main": "./lib/index.js",
   "files": [
-    "./lib/index.js"
+    "./lib/index.js",
+    "./lib/live_parcels.geojson.gz"
   ],
   "scripts": {
     "format": "npx prettier --arrow-parens=avoid --trailing-comma=none --write *.js */*.js",
-    "preinstall": "node setup.js",
+    "setup": "node setup.js",
     "test": "node test.js"
   },
   "keywords": [
