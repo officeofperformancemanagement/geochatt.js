@@ -1,0 +1,29 @@
+{
+  "name": "geochatt",
+  "version": "0.0.0",
+  "description": "JavaScript Utility Functions for Working with Open GeoSpatial Data about Chattanooga",
+  "main": "./lib/index.js",
+  "files": [
+    "./lib/index.js"
+  ],
+  "scripts": {
+    "format": "npx prettier --arrow-parens=avoid --trailing-comma=none --write *.js */*.js",
+    "preinstall": "node setup.js",
+    "test": "node test.js"
+  },
+  "keywords": [
+    "chattanooga",
+    "geo",
+    "gis"
+  ],
+  "author": "Daniel J. Dufour",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "flug": "^2.8.2"
+  },
+  "dependencies": {
+    "@turf/buffer": "^7.2.0",
+    "@turf/geojson-rbush": "^7.2.0",
+    "@turf/point-to-polygon-distance": "^7.2.0"
+  }
+}
